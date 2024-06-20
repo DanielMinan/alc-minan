@@ -17,8 +17,9 @@ def ludecomp(A):
         raise ValueError("A matriz de entrada deve ser quadrada.")
 
     n = A.shape[0]
-    L = np.eye(n)  # Inicializa L como matriz identidade
-    P = np.eye(n)  # Inicializa P como matriz identidade
+    L = np.eye(n, dtype=float)   # Inicializa L como matriz identidade
+    P = np.eye(n, dtype=float)   # Inicializa P como matriz identidade
+    U = np.zeros(n, dtype=float) # Inicializa P como matriz identidade
     U = A.copy()   # Copia A para U
     eps=1e-7       # Valor mínimo de pivô considerado não nulo
     
