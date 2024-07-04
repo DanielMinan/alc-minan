@@ -42,7 +42,7 @@ def alc_cholesky(A):
 try:
     A = np.array([[23, 12, -16],
               [12, 55, -23],
-              [-13, -23, -98]])
+              [-13, -23, 98]])
     R = alc_cholesky(A)
     print("R = \n",R)
     #print("A = \n", A)
