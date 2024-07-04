@@ -23,8 +23,8 @@ def alc_cholesky(A):
         
         tmp = A[i, i] - somaq
         if tmp <= 0:
-            print('A matriz de entrada não é positiva definida, impossibilidade de realizar a decomposição de Cholesky')
-            return None
+              raise ValueError('A matriz de entrada não é positiva definida, impossibilidade de realizar a decomposição de Cholesky')
+            
         #Cálculo da diagonal principal 
         R[i, i] = tmp**0.5
         
@@ -46,6 +46,6 @@ try:
     R = alc_cholesky(A)
     print("R = \n",R)
     #print("A = \n", A)
-    #print("R.T @ R = \n",  R.T @ R )
+    print("R.T @ R = \n",  R.T @ R )
 except ValueError as e:
     print(e)
